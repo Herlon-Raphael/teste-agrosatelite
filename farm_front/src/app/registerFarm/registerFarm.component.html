@@ -1,0 +1,92 @@
+<div class="card">
+  <p class="title">Registre sua fazenda:</p>
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label class="label-form" for="name">Nome da fazenda: </label>
+      <input
+        class="input-form"
+        type="text"
+        formControlName="name"
+        placeholder="Minha fazenda"
+        id="name"
+        required
+      />
+    </div>
+    <div>
+      <label class="label-form" for="area">Área: </label>
+      <input
+        class="input-form"
+        type="area"
+        formControlName="area"
+        placeholder="1000 (em m²)"
+        id="area"
+        required
+      />
+    </div>
+    <div>
+      <label class="label-form" for="centroide1">Centróide 1: </label>
+      <input
+        class="input-form"
+        type="text"
+        formControlName="centroide1"
+        placeholder="25.16542"
+        id="centroide1"
+        required
+      />
+      <label class="label-form" for="centroide2">Centróide 2: </label>
+      <input
+        class="input-form"
+        type="text"
+        formControlName="centroide2"
+        placeholder="25.15245"
+        id="centroide2"
+        required
+      />
+    </div>
+    <div>
+      <label class="label-form" for="tipo">Tipo: </label>
+      <input
+        class="input-form"
+        type="text"
+        formControlName="tipo"
+        placeholder="Quadrado"
+        id="tipo"
+        required
+      />
+      <label class="label-form" for="coordenadas">Coordenadas: </label>
+      <input
+        class="input-form"
+        type="text"
+        formControlName="coordenadas"
+        placeholder="24.5547, 25.45111, 25.41622, 25.54125"
+        id="coordenadas"
+        required
+      />
+    </div>
+    <div>
+      <label class="label-form" for="iddono">Id do Dono: </label>
+      <input
+        class="input-form"
+        type="text"
+        formControlName="iddono"
+        placeholder="1"
+        id="iddono"
+        required
+      />
+    </div>
+    <br />
+    <button type="submit" [disabled]="!registerForm.valid">Registrar</button>
+    <button type="button" (click)="draw('Circle')">Marcar no mapa</button>
+    <p>
+      Dúvidas?
+      <a href="https://www.agrosatelite.com.br/contato" target="_blank"> Entre em contato </a>
+    </p>
+  </form>
+  <footer class="footer">
+    <p class="p-footer">Todos os direitos reservados à AgroSatélite &#174;</p>
+    <p class="p-footer">
+      Rodovia SC-401, 8600 - Corporate Park, Bloco 7, sala 2 88050-000 | Santo Antônio de Lisboa,
+      Florianópolis - SC
+    </p>
+  </footer>
+</div>

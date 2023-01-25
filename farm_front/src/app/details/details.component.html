@@ -1,0 +1,18 @@
+<div class="card">
+    <p class="title">Informações sobre a fazenda</p>
+    <div *ngIf="farm">
+      <h1>{{ farm.name }}</h1>
+      <p>Centróide: {{ farm.centroid[0] }}, {{farm.centroid[1]}}</p>
+      <p>Área da fazenda: {{farm.area}} m²</p>
+      <p> Tipo da geometria: {{farm.geometry.type}}</p>
+      <p>Id do Dono: {{ farm.ownerid }}</p>
+      <button (click)="delete()"> excluir </button> 
+      <button (click)="edit(farm)"> editar </button>
+    </div>
+  <footer class="footer"> 
+    <p class="p-footer">Todos os direitos reservados à AgroSatélite &#174;</p>
+    <p class="p-footer">Rodovia SC-401, 8600 - Corporate Park, Bloco 7, sala 2
+      88050-000 | Santo Antônio de Lisboa, Florianópolis - SC</p>
+  </footer>
+</div>
+

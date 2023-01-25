@@ -1,0 +1,19 @@
+<div class="card">
+    <p class="title">Página inicial </p>
+    <main>
+      <p>Fazendas registradas:</p>
+      <ul style="display: flex; flex-direction: column; gap: 2px;">
+        <li *ngFor="let farm of farms" (click)="farmDetails(farm.id)" style="cursor: pointer;">
+          {{ farm.name }}
+        </li>
+     
+      </ul>
+      <p routerLink="farm" style="cursor: pointer;">Cadastrar</p>
+    </main>
+  <footer class="footer"> 
+    <p class="p-footer">Todos os direitos reservados à AgroSatélite &#174;</p>
+    <p class="p-footer">Rodovia SC-401, 8600 - Corporate Park, Bloco 7, sala 2
+      88050-000 | Santo Antônio de Lisboa, Florianópolis - SC</p>
+  </footer>
+</div>
+

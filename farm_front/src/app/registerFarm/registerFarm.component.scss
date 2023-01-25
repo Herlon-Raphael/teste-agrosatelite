@@ -1,0 +1,28 @@
+
+.input-form {
+  width: 100%;
+  margin-bottom: 0.2em;
+}
+.input-form:focus {
+  transition-duration: (1);
+  width: 100%;
+}
+.title {
+  font-size: 2em;
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+}
+.footer {
+  margin-top: 25%;
+}
+.p-footer {
+  font-size: 0.9em;
+  font-family:Georgia, 'Times New Roman', Times, serif
+
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
