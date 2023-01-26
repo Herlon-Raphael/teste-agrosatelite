@@ -8,7 +8,7 @@ class Farm(models.Model):
     name = models.CharField(verbose_name=_("Name"), max_length=255,
                             null=False, blank=False)
 
-    prop = models.ForeignKey(owner, on_delete=models.CASCADE, related_name='fazendas')
+    owner = models.ForeignKey(owner, on_delete=models.CASCADE, related_name='fazendas', null=False, blank=False)
 
     state = models.CharField(verbose_name=_("State"), max_length=255, null=False, blank=False)
 
